@@ -15,6 +15,11 @@ A production-quality Hybrid Retrieval-Augmented Generation (RAG) system using a 
 - **Visualizer Table**: Gain perfect insight into *why* chunks were generation candidates, seeing exact score breakdowns for BM25, FAISS, RRF, and the Reranker entirely natively in the UI.
 - **Secure Gemini Generation**: Connects to `gemini-3-flash-preview` for answer generation with strict prompting parameters to minimize hallucination. The API key is entered at runtime and never saved to disk.
 
+
+## Hybrid RAG Architecture
+
+![Hybrid RAG Architecture](Hybrid_RAG%20architecture.png)
+
 ## System Architecture
 
 The project maintains a strict, modular separation of concerns designed for future extensibility:
@@ -55,6 +60,11 @@ python -m rag_hybrid.app
 ```
 
 The Gradio web interface will boot up locally (usually on `http://127.0.0.1:7860`).
+
+
+## Demo
+
+![Hybrid RAG Demo](hybrid_RAG_demo.mp4)
 
 ### 1. Indexing Documents
 Navigate to the **Indexing** tab. You can add as many PDFs, text snippets, and URLs as you like. Hitting "Index" will execute extraction, chunking, and dual-index (BM25 + FAISS) construction. 
